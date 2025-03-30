@@ -1,26 +1,26 @@
-🚀 Azure Infrastructure as Code (IaC) with Bicep
-This project demonstrates Infrastructure as Code (IaC) using Bicep to deploy a containerized Flask application on Azure with security and monitoring best practices.
+# Azure Infrastructure as Code (IaC) with Bicep  
 
-📋 Overview
-The project automates the deployment of:
+This project automates the deployment of a **containerized Flask app** on Azure using **Bicep**, following security and operational best practices.
 
-Azure Container Registry (ACR) – Stores the Docker container image.
+## 📋 Overview  
+### Key Components  
+1. **Azure Container Registry (ACR)** - Stores the Docker container image securely.  
+2. **Least-Privilege ACR Token** - Restricts access to only necessary repository permissions.  
+3. **Azure Container Instance (ACI)** - Runs the app with public accessibility.  
 
-ACR Token with Least Privilege – Secures access to the registry.
+### ✅ Implemented Best Practices  
+- **Public IP** for external access  
+- **HTTP/80** for standard web traffic  
+- **Azure Monitor Logging** for centralized diagnostics  
+- **Disabled ACR Admin User** (security hardening)  
 
-Azure Container Instance (ACI) – Runs the Flask app with public access.
+---
 
-✅ Best Practices Implemented
-Public IP – Allows external access to the application.
+## 📂 File Structure  
+| File | Purpose |  
+|------|---------|  
+| [`main.bicep`](./main.bicep) | Creates the Azure Container Registry |  
+| [`acr-token.bicep`](./acr-token.bicep) | Generates scoped ACR access token |  
+| [`aci-deployment.bicep`](./aci-deployment.bicep) | Deploys container to ACI with monitoring |  
 
-HTTP on Port 80 – Standard web traffic port.
-
-Azure Monitor Logging – Centralized logging for container diagnostics.
-
-Least Privilege ACR Token – Restricts access to only necessary permissions.
-
-📂 Files
-File	Description
-main.bicep	Creates an Azure Container Registry (ACR) with security best practices.
-acr-token.bicep	Generates a least-privilege ACR token for secure access.
-aci-deployment.bicep	Deploys the container to Azure Container Instances (ACI) with a public IP and logging.
+---
