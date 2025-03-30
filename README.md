@@ -12,8 +12,6 @@ This project automates the deployment of a **containerized Flask app** on Azure 
 - **Public IP** for external access  
 - **HTTP/80** for standard web traffic  
 - **Azure Monitor Logging** for centralized diagnostics  
-- **Disabled ACR Admin User** (security hardening)  
-
 ---
 
 ## 📂 File Structure  
