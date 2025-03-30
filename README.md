@@ -43,3 +43,10 @@ az deployment group create `
     containerImage=<your-image-name>:latest `
     acrUsername=<your-acr-username> `
     acrPassword='<your-acr-password>'
+
+# Access the app
+az container show `
+  --name <your-aci-name> `
+  --resource-group <your-resource-group> `
+  --query "ipAddress.fqdn" `
+  --output tsv
