@@ -24,6 +24,9 @@ This project deploys a **CRUD app** on Azure using **Bicep**, following security
 ---
 ## 🛠️ Deployment   
 ```bash
+docker build -t <your-image-name> .
+az login
+
 # Deploy ACR
 az deployment group create `
   --resource-group <your-rg> `
