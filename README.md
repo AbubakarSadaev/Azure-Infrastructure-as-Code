@@ -49,4 +49,12 @@ az container show `
   --name <your-aci-name> `
   --resource-group <your-resource-group> `
   --query "ipAddress.fqdn" `
-  --output tsv
+  --output tsv!
+
+Azure Monitor:
+![image](https://github.com/user-attachments/assets/88d948eb-c175-4509-8320-4932eb284bf5)
+
+App:
+![image](https://github.com/user-attachments/assets/55b75e7b-5b2a-402c-9aed-17668f1e6e8e)
+
+
