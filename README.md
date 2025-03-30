@@ -9,7 +9,8 @@ This project deploys a **CRUD app** on Azure using **Bicep**, following security
 3. **Azure Container Instance (ACI)** - Runs the app with public accessibility.
 
 ## 🔷Diagram
-![image](https://github.com/user-attachments/assets/a3926ac5-bf12-4e2b-9367-5691a78acb48)
+![image](https://github.com/user-attachments/assets/fceadced-ce91-40a7-b84b-788739299990)
+
 
 
 ### ✅ Implemented Best Practices  
