@@ -22,3 +22,28 @@ This project automates the deployment of a **containerized Flask app** on Azure 
 | [`aci-deployment.bicep`](./aci-deployment.bicep) | Deploys container to ACI with monitoring |  
 
 ---
+## 🛠️ Deployment  
+### 1. Build & Push Container  
+```bash
+docker build -t example-flask-crud .
+az acr login --name <your-acr-name>
+docker push <your-acr-name>.azurecr.io/example-flask-crud:latest
+# Deploy ACR
+az deployment group create `
+  --resource-group <your-rg> `
+  --template-file main.bicep
+
+# Create ACR token
+az deployment group create `
+  --resource-group <your-rg> `
+  --template-file acr-token.bicep
+
+# Launch container
+az deployment group create `
+  --resource-group <your-resource-group> `
+  --template-file aci-deployment.bicep `
+  --parameters `
+    acrName=<your-acr-name> `
+    containerImage=<your-image-name>:latest `
+    acrUsername=<your-acr-username> `
+    acrPassword='<your-acr-password>'
