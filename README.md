@@ -1,6 +1,6 @@
 # Azure Infrastructure as Code (IaC) with Bicep  
 
-This project automates the deployment of a **containerized Flask app** on Azure using **Bicep**, following security and operational best practices.
+This project deploys a **CRUD app** on Azure using **Bicep**, following security and operational best practices.
 
 ## 📋 Overview  
 ### Key Components  
